@@ -1,0 +1,24 @@
+{
+  "item.terrariamod.ruby": "Ruby",
+  "item.terrariamod.sapphire": "Sapphire",
+  "item.terrariamod.copper_bar": "Copper Bar",
+  "item.terrariamod.silver_bar": "Silver Bar",
+  "item.terrariamod.apple": "Apple",
+
+  "item.terrariamod.copper_shortsword": "Copper Shortsword",
+  "item.terrariamod.copper_broadsword": "Copper Broadsword",
+  "item.terrariamod.copper_pickaxe": "Copper Pickaxe",
+  "item.terrariamod.copper_axe": "Copper Axe",
+
+  "item.terrariamod.copper_helmet": "Copper Helmet",
+  "item.terrariamod.copper_chainmail": "Copper Chainmail",
+  "item.terrariamod.copper_leggings": "Copper Leggings",
+  "item.terrariamod.copper_greaves": "Copper Greaves",
+
+  "block.terrariamod.ruby_ore": "Ruby Ore",
+  "block.terrariamod.table": "Table",
+
+  "itemGroup.terrariaitemtab": "Terraria Items",
+  "itemGroup.terrariablocktab": "Terraria Blocks",
+  "itemGroup.terrariatooltab": "Terraria Tools"
+}

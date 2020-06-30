@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "terrariamod:block/table" },
+    "facing=south": { "model": "terrariamod:block/table", "y": 180 },
+    "facing=east": { "model": "terrariamod:block/table", "y": 270 },
+    "facing=west": { "model": "terrariamod:block/table", "y": 90 }
+  }
+}
