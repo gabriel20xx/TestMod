@@ -1,6 +1,9 @@
 {
   "item.terrariamod.ruby": "Ruby",
   "item.terrariamod.sapphire": "Sapphire",
+  "item.terrariamod.amethyst": "Amethyst",
+  "item.terrariamod.topaz": "Topaz",
+  "item.terrariamod.copper": "Copper",
   "item.terrariamod.copper_bar": "Copper Bar",
   "item.terrariamod.silver_bar": "Silver Bar",
   "item.terrariamod.apple": "Apple",
@@ -16,9 +19,20 @@
   "item.terrariamod.copper_greaves": "Copper Greaves",
 
   "block.terrariamod.ruby_ore": "Ruby Ore",
+  "block.terrariamod.sapphire_ore": "Sapphire Ore",
+  "block.terrariamod.amethyst_ore": "Amethyst Ore",
+  "block.terrariamod.topaz_ore": "Topaz Ore",
+  "block.terrariamod.copper_ore_block": "Block of Copper Ore",
+
+  "block.terrariamod.ebonstone_block": "Ebonstone Block",
+
   "block.terrariamod.table": "Table",
 
   "itemGroup.terrariaitemtab": "Terraria Items",
   "itemGroup.terrariablocktab": "Terraria Blocks",
-  "itemGroup.terrariatooltab": "Terraria Tools"
+  "itemGroup.terrariatooltab": "Terraria Tools",
+  "itemGroup.terrariacombattab": "Terraria Combat",
+  "itemGroup.terrariaothertab": "Terraria Other",
+
+  "biome.terrariamod.corruption_biome": "Corruption"
 }

@@ -3,13 +3,13 @@
   "pools": [
     {
       "rolls": 1.0,
+      "experience": 5.0,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "terrariamod:ruby"
+          "name": "terrariamod:copper"
         }
       ]
     }
-  ],
-  "experience": 5.0
+  ]
 }

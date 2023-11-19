@@ -6,9 +6,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "terrariamod:ruby"
+          "name": "terrariamod:sapphire",
+          "experience": 5.0
         }
-      ]
+      ],
+      "experience": 5.0
     }
   ],
   "experience": 5.0

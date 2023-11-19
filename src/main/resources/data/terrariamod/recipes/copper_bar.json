@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "terrariamod:copper"
+    },
+    {
+      "item": "terrariamod:copper"
+    },
+    {
+      "item": "terrariamod:copper"
+    }
+  ],
+  "result": {
+    "item": "terrariamod:copper_bar"
+  }
+}

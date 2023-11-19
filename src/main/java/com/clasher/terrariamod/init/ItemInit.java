@@ -26,21 +26,30 @@ public class ItemInit
     //Minerals
     public static final Item ruby = null;
     public static final Item sapphire = null;
+    public static final Item amethyst = null;
+    public static final Item topaz = null;
+
+    //Ores
+    public static final Item copper = null;
+
+    //Bars
     public static final Item copper_bar = null;
     public static final Item silver_bar = null;
     public static final Item special = null;
 
-    //Tools
+    //Combat
     public static final Item copper_shortsword = null;
     public static final Item copper_broadsword = null;
-    public static final Item copper_pickaxe = null;
-    public static final Item copper_axe = null;
-
-    //Armor
     public static final Item copper_helmet = null;
     public static final Item copper_chainmail = null;
     public static final Item copper_leggings = null;
     public static final Item copper_greaves = null;
+
+    //Tools
+    public static final Item copper_pickaxe = null;
+    public static final Item copper_axe = null;
+
+
 
     @SubscribeEvent
     public static void registerItems(final RegistryEvent.Register<Item> event)
@@ -48,32 +57,39 @@ public class ItemInit
         //Materials
         event.getRegistry().register(new Item(new Item.Properties().group(TerrariaMod.TerrariaItemGroup.instance)).setRegistryName("ruby"));
         event.getRegistry().register(new Item(new Item.Properties().group(TerrariaMod.TerrariaItemGroup.instance)).setRegistryName("sapphire"));
+        event.getRegistry().register(new Item(new Item.Properties().group(TerrariaMod.TerrariaItemGroup.instance)).setRegistryName("amethyst"));
+        event.getRegistry().register(new Item(new Item.Properties().group(TerrariaMod.TerrariaItemGroup.instance)).setRegistryName("topaz"));
+
+        //Ores
+        event.getRegistry().register(new Item(new Item.Properties().group(TerrariaMod.TerrariaItemGroup.instance)).setRegistryName("copper"));
+
+        //Bars
         event.getRegistry().register(new Item(new Item.Properties().group(TerrariaMod.TerrariaItemGroup.instance)).setRegistryName("copper_bar"));
         event.getRegistry().register(new Item(new Item.Properties().group(TerrariaMod.TerrariaItemGroup.instance)).setRegistryName("silver_bar"));
 
         //Special
-        event.getRegistry().register(new SpecialItem(new Item.Properties().group(TerrariaMod.TerrariaItemGroup.instance)).setRegistryName("special_item"));
+        event.getRegistry().register(new SpecialItem(new Item.Properties().group(TerrariaMod.TerrariaOtherGroup.instance)).setRegistryName("special_item"));
 
         //Food
         event.getRegistry().register(new Item(new Item.Properties().group(TerrariaMod.TerrariaItemGroup.instance).food(new Food.Builder().hunger(6).saturation(1.2f).setAlwaysEdible().effect(new EffectInstance(Effects.REGENERATION, 12000, 0), 1.0f).build())).setRegistryName("apple"));
 
-        //Tools
-        event.getRegistry().register(new SwordItem(ModItemTier.EXAMPLE, 4, 2.0F, new Item.Properties().group(TerrariaMod.TerrariaToolGroup.instance)).setRegistryName("copper_shortsword"));
-        event.getRegistry().register(new SwordItem(ModItemTier.EXAMPLE, 5, 2.0F, new Item.Properties().group(TerrariaMod.TerrariaToolGroup.instance)).setRegistryName("copper_broadsword"));
-        event.getRegistry().register(new PickaxeItem(ModItemTier.EXAMPLE, 2, 2.0F, new Item.Properties().group(TerrariaMod.TerrariaToolGroup.instance)).setRegistryName("copper_pickaxe"));
-        event.getRegistry().register(new AxeItem(ModItemTier.EXAMPLE, 2, 2.0F, new Item.Properties().group(TerrariaMod.TerrariaToolGroup.instance)).setRegistryName("copper_axe"));
+        //Combat
+        event.getRegistry().register(new SwordItem(ModItemTier.COPPER, 4, 2.0F, new Item.Properties().group(TerrariaMod.TerrariaCombatGroup.instance)).setRegistryName("copper_shortsword"));
+        event.getRegistry().register(new SwordItem(ModItemTier.COPPER, 5, 2.0F, new Item.Properties().group(TerrariaMod.TerrariaCombatGroup.instance)).setRegistryName("copper_broadsword"));
+        event.getRegistry().register(new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlotType.HEAD, new Item.Properties().group(TerrariaMod.TerrariaCombatGroup.instance)).setRegistryName("copper_helmet"));
+        event.getRegistry().register(new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlotType.CHEST, new Item.Properties().group(TerrariaMod.TerrariaCombatGroup.instance)).setRegistryName("copper_chainmail"));
+        event.getRegistry().register(new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlotType.LEGS, new Item.Properties().group(TerrariaMod.TerrariaCombatGroup.instance)).setRegistryName("copper_leggings"));
+        event.getRegistry().register(new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlotType.FEET, new Item.Properties().group(TerrariaMod.TerrariaCombatGroup.instance)).setRegistryName("copper_greaves"));
 
-        //Armor
-        event.getRegistry().register(new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlotType.HEAD, new Item.Properties().group(TerrariaMod.TerrariaItemGroup.instance)).setRegistryName("copper_helmet"));
-        event.getRegistry().register(new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlotType.CHEST, new Item.Properties().group(TerrariaMod.TerrariaItemGroup.instance)).setRegistryName("copper_chainmail"));
-        event.getRegistry().register(new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlotType.LEGS, new Item.Properties().group(TerrariaMod.TerrariaItemGroup.instance)).setRegistryName("copper_leggings"));
-        event.getRegistry().register(new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlotType.FEET, new Item.Properties().group(TerrariaMod.TerrariaItemGroup.instance)).setRegistryName("copper_greaves"));
+        //Tools
+        event.getRegistry().register(new PickaxeItem(ModItemTier.COPPER, 2, 2.0F, new Item.Properties().group(TerrariaMod.TerrariaToolGroup.instance)).setRegistryName("copper_pickaxe"));
+        event.getRegistry().register(new AxeItem(ModItemTier.COPPER, 2, 2.0F, new Item.Properties().group(TerrariaMod.TerrariaToolGroup.instance)).setRegistryName("copper_axe"));
 
     }
 
     public enum ModItemTier implements IItemTier {
-        EXAMPLE(2, 1500, 5.0F, 7.0F, 1, () -> {
-           return Ingredient.fromItems(ItemInit.ruby);
+        COPPER(2, 1500, 5.0F, 7.0F, 1, () -> {
+           return Ingredient.fromItems(ItemInit.copper);
         });
 
         private final int harvestLevel;
